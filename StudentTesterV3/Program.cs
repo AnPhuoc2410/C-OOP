@@ -14,6 +14,30 @@ namespace StudentTesterV3
             Console.WriteLine("student: " + student);//GOi ToString
             Console.WriteLine("Student name: " + student.Name);
             Console.WriteLine("Student yob: " + student.Yob);
+
+           //Sử dụng Get Set ngay khi New
+           var Phuoc = new Student();
+            Console.WriteLine("Phuoc info at first: {0}" , Phuoc);
+            //Điền Info qua con đường Set()
+            //Cách C#
+            Phuoc.Id = "Kamen";
+            Phuoc.Yob = 2009;
+            Phuoc.Gpa = 8.3;
+            Phuoc.Name = "Double";
+            //Get() Set() tự nhiên như đang sài biến, biến bản chất bao hàm sẵn ý nghĩa get() set() 
+
+            //Chấn ĐỘng - New và SET gọi cùng lúc
+            var dung = new Student()
+            {
+                Id = "SE4",
+                Name = "Dũng",
+                Yob = 2009,
+                Gpa = 8.3
+                //Cú pháp này được gọi là Object Initialization
+                //Tạo object đồng thời gán các Backing Field qua Property
+            };
+            Console.WriteLine("Dũng Info : " + dung);
+            
         }
     }
 }
